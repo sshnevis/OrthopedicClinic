@@ -1,0 +1,22 @@
+﻿.header {
+    padding-top: 20px;
+}
+
+
+.fullwidth *{
+    width:100%;
+}
+
+@media (min-width: 750px) {
+    .textriz {
+        font-size: 0.9em;
+    }
+
+    .textriztar {
+        font-size: 0.8em;
+    }
+
+    .textriztartar {
+        font-size: 0.7em;
+    }
+}

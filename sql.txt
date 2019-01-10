@@ -1,0 +1,70 @@
+USE [master]
+GO
+/****** Object:  Database [OrthopedicClinic]    Script Date: 1/19/2018 12:52:28 PM ******/
+CREATE DATABASE [OrthopedicClinic]
+
+GO
+
+USE [OrthopedicClinic]
+GO
+/****** Object:  Table [dbo].[Account]    Script Date: 1/19/2018 12:52:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Account](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Usernames] [ntext] NULL,
+	[Passwords] [ntext] NULL,
+	[Permissions] [ntext] NULL,
+	[Esm] [ntext] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Personal]    Script Date: 1/19/2018 12:52:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Personal](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[NationalCode] [ntext] NULL,
+	[FirstName] [ntext] NULL,
+	[LastName] [ntext] NULL,
+	[FathersName] [ntext] NULL,
+	[Birthday] [ntext] NULL,
+	[Created] [ntext] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[StoreData]    Script Date: 1/19/2018 12:52:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StoreData](
+	[personalid] [int] NOT NULL,
+	[frmid] [ntext] NOT NULL,
+	[objectid] [ntext] NOT NULL,
+	[valueid] [ntext] NULL,
+	[whichid] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Which]    Script Date: 1/19/2018 12:52:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Which](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[personalid] [int] NULL,
+	[frmid] [ntext] NULL,
+	[Timing] [ntext] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+USE [master]
+GO
+ALTER DATABASE [OrthopedicClinic] SET  READ_WRITE 
+GO

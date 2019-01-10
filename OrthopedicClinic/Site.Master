@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="OrthopedicClinic.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>OrthopedicClinic</title>
+
+    <!-- Bootstrap -->
+    <link href="/css/ssh.css" rel="stylesheet" />
+    <link href="/css/bootstrap-spacelab.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery.min.js"></script>
+    <%--<link href="css/bootstrap-theme.min.css" rel="stylesheet" />--%>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmMain" runat="server">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-inverse">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#SerguryMenu">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">Orthopedic Clinic</a>
+                                </div>
+                                <div style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="SerguryMenu">
+                                    <ul class="nav navbar-nav">
+                                        <li><%--class="active"--%>
+                                            <a href="/default.aspx">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="/intro.aspx">Search</a>
+                                        </li>
+                                        <li>
+                                            <a href="/personal.aspx">New</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Admin</a>
+                                        </li>
+                                        <li>
+                                            <a href="/default.aspx?l=logout">Exit  <span id="lblEsm" runat="server"></span>!</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderSection" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div class="clearfix"></div>
+
+            <footer>
+                <div class="row" style="border-top: 2px solid #ebebeb; padding-top: 20px; padding-bottom: 50px; margin-top: 150px;">
+                    <div class="col-md-8">
+                        Powered by : © 2017 <a href="http://talashnet.com/">Talashnet</a> Ltd.
+                    </div>
+                    <div class="col-md-4" style="text-align: right;">
+                        <a id="imgAndroid" title="1.0.13" href="app/orthosurgery.apk" target="_blank" style="display: inline-block; width: 200px;">
+                            <img title="1.0.13" src="/img/android.png" alt="OrthoSurgery for android" />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </form>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script>
+        function enableedit(frmid, btnid) {
+            $('#' + frmid + ' input[type=text]').attr("disabled", false);
+            $('#' + frmid + ' select').attr("disabled", false);
+            $('#' + frmid + ' textarea').attr("disabled", false);
+            $('#' + frmid + ' input[type=checkbox]').attr("disabled", false);
+            var btnvalue = document.getElementById(btnid).value;
+            if (btnvalue != "Change Data") {
+                document.getElementById(btnid).value = "Change Data";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
