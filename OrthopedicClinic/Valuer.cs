@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -9,7 +12,7 @@ using System.Web.UI.HtmlControls;
 namespace OrthopedicClinic
 {
     /// <summary>
-    /// Valuer v1.2
+    /// Valuer v1.3
     /// </summary>
     public class Valuer
     {
@@ -35,7 +38,56 @@ namespace OrthopedicClinic
                 }
             }
         }
+        public StringBuilder GETUploadImages(string pid, string wid)
+        {
+            StringBuilder Res = new StringBuilder("");
 
+            Res.Append("<div class=\"col-lg-12 col-md-12 col-xs-12 col-sm-12\"><div class=\"form-group\"><div class=\"col-lg-12\"><div class=\"col-lg-4 col-md-4 col-xs-4 col-sm-4\"><input type=\"file\" class=\"form-control-file\" id=\"_file\" name=\"_file\" multiple=\"multiple\" /></div><div class=\"col-lg-8 col-md-8 col-xs-8 col-sm-8\"><button class=\"btn btn-success col-lg-2\" type=\"submit\" onclick=\"return Uploading();\">Upload <span style=\"color: red;\">!</span></button></div></div><small id=\"fileHelp\" class=\"form-text text-muted\"><span style=\"color: red\">*</span> for DELETE press <span style=\"color: red\">RED</span> button </small><input type=\"hidden\" id=\"pid\" name=\"pid\" value=\"");
+            Res.Append(pid);
+            Res.Append("\" runat=\"server\" /><input type=\"hidden\" id=\"wid\" name=\"wid\" value=\"");
+            Res.Append(wid);
+            Res.Append("\" /></div></div><div class=\"clearfix\"></div><div class=\"col-lg-12 col-md-12 col-xs-12 col-sm-12\" id=\"imgsView\">");
+            //====================================================
+
+            //try
+            //{
+                var files = Directory.GetFiles(Path.Combine(HttpContext.Current.Server.MapPath("~/uploads" ), pid  , wid ), "*.*", SearchOption.AllDirectories);
+                List<string> imageFiles = new List<string>();
+                int i = 0;
+                foreach (string filename in files)
+                {
+                    if (Regex.IsMatch(filename, @".jpg|.png|.gif$"))
+                    {
+                    string address = "/uploads/" + pid + "/" + wid + "/" + Path.GetFileName(filename);
+                        Res.Append("<div class=\"bs-component col-md-4\" style=\"padding-top: 5px;\">");
+                        Res.Append("<div class=\"card border-success mb-3 \">");
+                        Res.Append("<div class=\"card-header\">");
+                        Res.Append("<button id=\"");
+                        Res.Append("del_");
+                        Res.Append(i);
+                        Res.Append("\" class=\"btn btn-danger\" style=\"width: 12%; float: right; height: 20px; line-height: 0.2;\" onclick=\"return Delete(this)\">X</button>");
+                        Res.Append("<button id=\"");
+                        Res.Append("vie_");
+                        Res.Append(i);
+                        Res.Append("\" class=\"btn btn-info\" style=\"height: 20px; line-height: 0.2;\" onclick=\"return View(this)\">View</button>");
+                        Res.Append("</div><div class=\"card-body\" style=\"width: 100%; height: auto;\"><img src=\"");
+                        Res.Append(address);
+                        Res.Append("\" style=\"width: 100%; height: auto;\" /></div></div></div>");
+                        i++;
+                    }
+                }
+            //}
+            //catch(Exception ee) {
+
+
+            //}
+            Res.Append("</div>");
+
+
+
+
+            return Res;
+        }
         public string GetNewWhichId(string pid, string frmid)
         {
             string timing = EasyTeb.Timing.NowTarikh + " " + EasyTeb.Timing.NowSaat;
@@ -111,9 +163,11 @@ namespace OrthopedicClinic
             Dictionary<string, string> dic = LoadStoreData(personalid, frmid, whichid);
             foreach (Control myobject in lst_controls)
             {
-                try
+                //try
+                //{
+                string namobject = myobject.ID;
+                if (namobject.Length > 8)
                 {
-                    string namobject = myobject.ID;
                     string shoru = namobject.Substring(0, 8);
                     string valueobject = "";
                     dic.TryGetValue(namobject, out valueobject);
@@ -131,9 +185,14 @@ namespace OrthopedicClinic
                         case "txaSaved":
                             ((HtmlTextArea)myobject).Value = valueobject;
                             break;
+                        case "duiSaved":
+                            string DUISAVED = GETUploadImages(personalid, whichid).ToString();
+                            ((HtmlGenericControl)myobject).InnerHtml = DUISAVED;
+                            break;
                     }
                 }
-                catch { }
+                //}
+                //catch { }
             }
         }
 

@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,12 +58,13 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Timing">
-      <HintPath>..\..\EasyTeb\Resource\For Setup\ExirSecretary\Timing.dll</HintPath>
+      <HintPath>..\..\..\lib\Timing\Timing.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap-spacelab.css" />
     <Content Include="css\ssh.css" />
+    <Content Include="css\StyleSheet1.css" />
     <Content Include="default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\adhesivecapsulitis.aspx" />
@@ -91,6 +93,7 @@
     <Content Include="intro.aspx" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.min.js" />
+    <Content Include="myController\upload.aspx" />
     <Content Include="personal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -265,6 +268,13 @@
     <Compile Include="intro.aspx.designer.cs">
       <DependentUpon>intro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="myController\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myController\upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="personal.aspx.cs">
       <DependentUpon>personal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,6 +308,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="files\" />
+    <Folder Include="myController\Upload\" />
+    <Folder Include="uploads\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

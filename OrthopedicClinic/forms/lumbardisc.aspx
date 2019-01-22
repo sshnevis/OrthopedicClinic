@@ -104,7 +104,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label class="control-label" >Pain sevetity(VAS score) :</label>
+                                <label class="control-label">Pain sevetity(VAS score) :</label>
                                 <input class="form-control" id="txtSavedVAS" runat="server" type="text" />
                             </div>
                         </div>
@@ -170,8 +170,8 @@
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label class="control-label" >Other :</label>
-                                <input class="form-control" id="txtSavedMalignancyOther" runat="server" disabled=""  type="text" />
+                                <label class="control-label">Other :</label>
+                                <input class="form-control" id="txtSavedMalignancyOther" runat="server" disabled="" type="text" />
                             </div>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label class="control-label">Sensory:</label>
-                                <select id="ddlSavedSensory" class="form-control" runat="server" disabled="" >
+                                <select id="ddlSavedSensory" class="form-control" runat="server" disabled="">
                                     <option selected="selected">Normal</option>
                                     <option>Decreased</option>
                                 </select>
@@ -285,7 +285,7 @@
                             <div class="form-group">
                                 <label class="control-label">X-Ray :</label>
                                 <label class="control-label">Spondylolisthesis:</label>
-                                <select id="ddlSavedXRaySpondylolisthesis" class="form-control" runat="server" disabled="" >
+                                <select id="ddlSavedXRaySpondylolisthesis" class="form-control" runat="server" disabled="">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -415,13 +415,13 @@
                     <div class="row" id="Div3" runat="server">
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label class="control-label" >Polyneuropathy:</label>
-                                <input class="form-control" id="txtSavedPolyneuropathy" runat="server" disabled=""  type="text" />
+                                <label class="control-label">Polyneuropathy:</label>
+                                <input class="form-control" id="txtSavedPolyneuropathy" runat="server" disabled="" type="text" />
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label" >Radiculopathy:</label>
+                                <label class="control-label">Radiculopathy:</label>
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" runat="server" id="chkSavedRadiculopathyL1" />
@@ -460,8 +460,6 @@
         </div>
         <div class="clearfix"></div>
 
-
-
         <div class="col-md-12 well">
             <div class="<%--form-horizontal--%>">
                 <fieldset>
@@ -470,7 +468,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label class="control-label">Diagnosis :</label>
-                                <select id="ddlSavedDiagnosis" class="form-control" runat="server" disabled="" >
+                                <select id="ddlSavedDiagnosis" class="form-control" runat="server" disabled="">
                                     <option>Senosis</option>
                                     <option>Lumbar disc herniation</option>
                                     <option>Spondyloisthesis</option>
@@ -480,7 +478,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label class="control-label" >Plan :</label>
+                                <label class="control-label">Plan :</label>
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" runat="server" id="chkSavedPlanMedication" />
@@ -499,7 +497,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <label class="control-label" >Other Information:</label>
+                                <label class="control-label">Other Information:</label>
                                 <textarea id="txaSavedOtherInformation" class="form-control" runat="server"></textarea>
                             </div>
                         </div>
@@ -511,9 +509,9 @@
         <div class="clearfix"></div>
 
 
-        
 
-        
+
+
 
 
 
@@ -539,13 +537,13 @@
         </div>
 
 
-        
-        
-    <script>
-        function editcts() {
-            return enableedit('<%= rowpage.ClientID %>', '<%= btnEdit.ClientID %>');
+
+
+        <script>
+            function editcts() {
+                return enableedit('<%= rowpage.ClientID %>', '<%= btnEdit.ClientID %>');
             }
-    </script>
+        </script>
 
 
 

@@ -91,8 +91,83 @@
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
+    <script>
+        function View(e) {
+            var idimg = $(e).parent().parent().find("img").attr('src');
+            var piid = $("#pid").val();
+            var wiid = $("#wid").val();
+            var windowOpener = window.open( idimg , "_blank");
+            if (windowOpener) {
+                win.focus();
+            } else {
+                alert('Please allow popups for this website');
+            }
+            return false;
+        }
 
-    
+
+        function Delete(e) {
+            var idimg = $(e).parent().parent().find("img").attr('src');
+            var piid = $("#pid").val();
+            var wiid = $("#wid").val();
+            if (confirm('Are You Sure ?')) {
+                $.post("/myController/upload.aspx",
+                    {
+                        name: idimg,
+                        action: "Delete",
+                        pid: piid,
+                        wid: wiid
+                    },
+                    function (data, status) {
+                        var diver = $(e).parent().parent().parent();
+                        if (data == "DELETED !!") {
+                            $(diver).fadeOut(1500);
+                        } else {
+                            alert("Cannot DELETE !")
+                        }
+                    });
+            } else {
+                var diver = $(e).parent().parent().parent();
+                $(diver).fadeOut(1500);
+                $(diver).fadeIn(1500);
+            }
+            return false;
+        }
+
+
+        function Uploading() {
+            var piid = $("#pid").val();
+            var wiid = $("#wid").val();
+            var data = new FormData();
+
+            for (var kk = 0; kk < $('#_file').length; kk++) {
+                $.each($('#_file')[kk].files, function (i, file) {
+                    data.append('file-' + i, file);
+                });
+            }
+            data.append('pid', piid);
+            data.append('wid', wiid);
+            data.append('action', "NEW");
+            $.ajax({
+                url: "/myController/upload.aspx",
+                data: data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                method: 'POST',
+                success: function (data) {
+                    alert(data);
+                    $("#imgsView").html($("#imgsView").html() + data);
+
+                }
+            });
+
+            return false;
+        }
+
+    </script>
+
+
     <script>
         function enableedit(frmid, btnid) {
             $('#' + frmid + ' input[type=text]').attr("disabled", false);
