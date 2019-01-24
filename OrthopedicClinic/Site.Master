@@ -156,7 +156,7 @@
                 processData: false,
                 method: 'POST',
                 success: function (data) {
-                    alert(data);
+                    //alert(data);
                     $("#imgsView").html($("#imgsView").html() + data);
 
                 }

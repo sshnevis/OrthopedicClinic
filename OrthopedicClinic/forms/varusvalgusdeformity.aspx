@@ -44,7 +44,7 @@
 
         <div class="clearfix"></div>
 
-        
+
         <%--=======================================================================--%>
 
 
@@ -128,7 +128,7 @@
                                 <label class="control-label">VA:</label>
                                 <input class="form-control" id="txtSavedVAVarusValgusRight" runat="server" type="text" disabled="" />
 
-                                <label class="control-label">Medical Computer Wear:</label>
+                                <label class="control-label">Medial Compartment Wear:</label>
                                 <input class="form-control" id="txtSavedMCWVarusValgusRight" runat="server" type="text" disabled="" />
 
                             </div>
@@ -175,8 +175,8 @@
             <div class="clearfix"></div>
         </div>
 
-        
-        
+
+
         <%--=======================================================================--%>
 
 
@@ -260,7 +260,7 @@
                                 <label class="control-label">VA:</label>
                                 <input class="form-control" id="txtSavedVAVarusValgusLeft" runat="server" type="text" disabled="" />
 
-                                <label class="control-label">Medical Computer Wear:</label>
+                                <label class="control-label">Medial Compartment Wear:</label>
                                 <input class="form-control" id="txtSavedMCWVarusValgusLeft" runat="server" type="text" disabled="" />
 
                             </div>
@@ -302,7 +302,6 @@
                     </div>
                 </fieldset>
 
-
             </div>
             <div class="clearfix"></div>
         </div>
@@ -310,11 +309,17 @@
 
 
         <div class="clearfix"></div>
+        
 
 
 
-
-
+        
+            <fieldset>
+                <legend>Image Manager</legend>
+                <div class="col-md-12">
+                    <div id="duiSaved123" runat="server"></div>
+                </div>
+            </fieldset>
 
 
 
@@ -345,7 +350,7 @@
         <script>
             function editcts() {
                 return enableedit('<%= rowpage.ClientID %>', '<%= btnEdit.ClientID %>');
-        }
+            }
         </script>
 
 

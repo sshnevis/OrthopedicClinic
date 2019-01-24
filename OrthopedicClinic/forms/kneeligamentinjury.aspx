@@ -283,7 +283,8 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedACLRight" runat="server" type="text" disabled="" />
                             </div>
-                            <hr />
+                        </div>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">PCL :</label>
                                 <select id="ddlSavedPCLRight" class="form-control" runat="server" disabled="">
@@ -296,7 +297,9 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedPCLRight" runat="server" type="text" disabled="" />
                             </div>
-                            <hr />
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">MCL :</label>
                                 <select id="ddlSavedMCLRight" class="form-control" runat="server" disabled="">
@@ -309,7 +312,9 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedMCLRight" runat="server" type="text" disabled="" />
                             </div>
-                            <hr />
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">LCL :</label>
                                 <select id="ddlSavedLCLRight" class="form-control" runat="server" disabled="">
@@ -322,13 +327,12 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedLCLRight" runat="server" type="text" disabled="" />
                             </div>
-
-
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="form-group">
-                                <label class="control-label">LateralMeniscus :</label>
+                                    <label class="control-label">LateralMeniscus :</label>
                                     <select id="ddlSavedLateralMeniscusRight" class="form-control" runat="server" disabled="">
                                         <option selected="selected"></option>
                                         <option>Intact</option>
@@ -341,70 +345,75 @@
                                     <label class="control-label">Detail :</label>
                                     <input class="form-control" id="txtSavedLateralMeniscusRight" runat="server" type="text" disabled="" />
                                 </div>
-                                <hr />
-                                <div class="form-group">
-                                <label class="control-label">MedialMeniscus :</label>
-                                    <select id="ddlSavedMedialMeniscusRight" class="form-control" runat="server" disabled="">
-                                        <option selected="selected"></option>
-                                        <option>Intact</option>
-                                        <option>Ramp Lesion</option>
-                                        <option>Partial Tear</option>
-                                        <option>Bucket Handle</option>
-                                        <option>other--></option>
-                                    </select>
-                                    <label class="control-label">Detail :</label>
-                                    <input class="form-control" id="txtSavedMedialMeniscusRight" runat="server" type="text" disabled="" />
-                                </div>
-                                <hr />
-                                <div class="form-group">
-                                <label class="control-label">Diagnosis :</label>
-                                    <select id="ddlSavedDiagnosisRight" class="form-control" runat="server" disabled="">
-                                        <option selected="selected"></option>
-                                        <option>ACL Tear</option>
-                                        <option>ACL/PCL Tear</option>
-                                        <option>PCL Tear</option>
-                                        <option>Multiligament Tear</option>
-                                        <option>ACL & Medial Meniscal Tear</option>
-                                        <option>ACL & Lateral Meniscal Tear</option>
-                                        <option>Multiligament & Medial Meniscal Tear</option>
-                                        <option>Multiligament & Lateral Meniscal Tear</option>
-                                        <option>Medial Meniscal tear</option>
-                                        <option>Lateral Meniscal Tear</option>
-                                        <option>other--></option>
-                                    </select>
-                                    <label class="control-label">Detail :</label>
-                                    <input class="form-control" id="txtSavedDiagnosisRight" runat="server" type="text" disabled="" />
-                                </div>
-                                <hr />
-                                <div class="form-group">
-                                <label class="control-label">Plan :</label>
-                                    <select id="ddlSavedPlanRight" class="form-control" runat="server" disabled="">
-                                        <option selected="selected"></option>
-                                        <option>ACL Reconstruction</option>
-                                        <option>PCL Reconstruction</option>
-                                        <option>ACL/PCL Reconstruction</option>
-                                        <option>MultiLigament Reconstruction</option>
-                                        <option>ACL Reattach</option>
-                                        <option>ACL & Meniscal Repair</option>
-                                        <option>PCL & Meniscal Repair</option>
-                                        <option>Meniscal Repair</option>
-                                        <option>other--></option>
-                                    </select>
-                                    <label class="control-label">Detail :</label>
-                                    <input class="form-control" id="txtSavedPlanRight" runat="server" type="text" disabled="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <p></p>
-                                <label class="control-label">xray :</label>
-                                <textarea id="txaSavedxrayrRight" class="form-control" runat="server" disabled=""></textarea>
-                                <label class="control-label">PACS :</label>
-                                <input class="form-control" id="txtSavedPACSRight" runat="server" type="text" disabled="" />
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">MedialMeniscus :</label>
+                                <select id="ddlSavedMedialMeniscusRight" class="form-control" runat="server" disabled="">
+                                    <option selected="selected"></option>
+                                    <option>Intact</option>
+                                    <option>Ramp Lesion</option>
+                                    <option>Partial Tear</option>
+                                    <option>Bucket Handle</option>
+                                    <option>other--></option>
+                                </select>
+                                <label class="control-label">Detail :</label>
+                                <input class="form-control" id="txtSavedMedialMeniscusRight" runat="server" type="text" disabled="" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Diagnosis :</label>
+                                <select id="ddlSavedDiagnosisRight" class="form-control" runat="server" disabled="">
+                                    <option selected="selected"></option>
+                                    <option>ACL Tear</option>
+                                    <option>ACL/PCL Tear</option>
+                                    <option>PCL Tear</option>
+                                    <option>Multiligament Tear</option>
+                                    <option>ACL & Medial Meniscal Tear</option>
+                                    <option>ACL & Lateral Meniscal Tear</option>
+                                    <option>Multiligament & Medial Meniscal Tear</option>
+                                    <option>Multiligament & Lateral Meniscal Tear</option>
+                                    <option>Medial Meniscal tear</option>
+                                    <option>Lateral Meniscal Tear</option>
+                                    <option>other--></option>
+                                </select>
+                                <label class="control-label">Detail :</label>
+                                <input class="form-control" id="txtSavedDiagnosisRight" runat="server" type="text" disabled="" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Plan :</label>
+                                <select id="ddlSavedPlanRight" class="form-control" runat="server" disabled="">
+                                    <option selected="selected"></option>
+                                    <option>ACL Reconstruction</option>
+                                    <option>PCL Reconstruction</option>
+                                    <option>ACL/PCL Reconstruction</option>
+                                    <option>MultiLigament Reconstruction</option>
+                                    <option>ACL Reattach</option>
+                                    <option>ACL & Meniscal Repair</option>
+                                    <option>PCL & Meniscal Repair</option>
+                                    <option>Meniscal Repair</option>
+                                    <option>other--></option>
+                                </select>
+                                <label class="control-label">Detail :</label>
+                                <input class="form-control" id="txtSavedPlanRight" runat="server" type="text" disabled="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p></p>
+                            <label class="control-label">XRay :</label>
+                            <textarea id="txaSavedxrayrRight" class="form-control" runat="server" disabled=""></textarea>
+                            <label class="control-label">PACS :</label>
+                            <input class="form-control" id="txtSavedPACSRight" runat="server" type="text" disabled="" />
+                        </div>
                     </div>
                 </fieldset>
             </div>
@@ -649,7 +658,8 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedACLLeft" runat="server" type="text" disabled="" />
                             </div>
-                            <hr />
+                        </div>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">PCL :</label>
                                 <select id="ddlSavedPCLLeft" class="form-control" runat="server" disabled="">
@@ -662,7 +672,9 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedPCLLeft" runat="server" type="text" disabled="" />
                             </div>
-                            <hr />
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">MCL :</label>
                                 <select id="ddlSavedMCLLeft" class="form-control" runat="server" disabled="">
@@ -675,7 +687,9 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedMCLLeft" runat="server" type="text" disabled="" />
                             </div>
-                            <hr />
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">LCL :</label>
                                 <select id="ddlSavedLCLLeft" class="form-control" runat="server" disabled="">
@@ -688,13 +702,12 @@
                                 <label class="control-label">Detail :</label>
                                 <input class="form-control" id="txtSavedLCLLeft" runat="server" type="text" disabled="" />
                             </div>
-
-
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="form-group">
-                                <label class="control-label">LateralMeniscus :</label>
+                                    <label class="control-label">LateralMeniscus :</label>
                                     <select id="ddlSavedLateralMeniscusLeft" class="form-control" runat="server" disabled="">
                                         <option selected="selected"></option>
                                         <option>Intact</option>
@@ -707,70 +720,75 @@
                                     <label class="control-label">Detail :</label>
                                     <input class="form-control" id="txtSavedLateralMeniscusLeft" runat="server" type="text" disabled="" />
                                 </div>
-                                <hr />
-                                <div class="form-group">
-                                <label class="control-label">MedialMeniscus :</label>
-                                    <select id="ddlSavedMedialMeniscusLeft" class="form-control" runat="server" disabled="">
-                                        <option selected="selected"></option>
-                                        <option>Intact</option>
-                                        <option>Ramp Lesion</option>
-                                        <option>Partial Tear</option>
-                                        <option>Bucket Handle</option>
-                                        <option>other--></option>
-                                    </select>
-                                    <label class="control-label">Detail :</label>
-                                    <input class="form-control" id="txtSavedMedialMeniscusLeft" runat="server" type="text" disabled="" />
-                                </div>
-                                <hr />
-                                <div class="form-group">
-                                <label class="control-label">Diagnosis :</label>
-                                    <select id="ddlSavedDiagnosisLeft" class="form-control" runat="server" disabled="">
-                                        <option selected="selected"></option>
-                                        <option>ACL Tear</option>
-                                        <option>ACL/PCL Tear</option>
-                                        <option>PCL Tear</option>
-                                        <option>Multiligament Tear</option>
-                                        <option>ACL & Medial Meniscal Tear</option>
-                                        <option>ACL & Lateral Meniscal Tear</option>
-                                        <option>Multiligament & Medial Meniscal Tear</option>
-                                        <option>Multiligament & Lateral Meniscal Tear</option>
-                                        <option>Medial Meniscal tear</option>
-                                        <option>Lateral Meniscal Tear</option>
-                                        <option>other--></option>
-                                    </select>
-                                    <label class="control-label">Detail :</label>
-                                    <input class="form-control" id="txtSavedDiagnosisLeft" runat="server" type="text" disabled="" />
-                                </div>
-                                <hr />
-                                <div class="form-group">
-                                <label class="control-label">Plan :</label>
-                                    <select id="ddlSavedPlanLeft" class="form-control" runat="server" disabled="">
-                                        <option selected="selected"></option>
-                                        <option>ACL Reconstruction</option>
-                                        <option>PCL Reconstruction</option>
-                                        <option>ACL/PCL Reconstruction</option>
-                                        <option>MultiLigament Reconstruction</option>
-                                        <option>ACL Reattach</option>
-                                        <option>ACL & Meniscal Repair</option>
-                                        <option>PCL & Meniscal Repair</option>
-                                        <option>Meniscal Repair</option>
-                                        <option>other--></option>
-                                    </select>
-                                    <label class="control-label">Detail :</label>
-                                    <input class="form-control" id="txtSavedPlanLeft" runat="server" type="text" disabled="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <p></p>
-                                <label class="control-label">xray :</label>
-                                <textarea id="txaSavedxrayrLeft" class="form-control" runat="server" disabled=""></textarea>
-                                <label class="control-label">PACS :</label>
-                                <input class="form-control" id="txtSavedPACSLeft" runat="server" type="text" disabled="" />
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">MedialMeniscus :</label>
+                                <select id="ddlSavedMedialMeniscusLeft" class="form-control" runat="server" disabled="">
+                                    <option selected="selected"></option>
+                                    <option>Intact</option>
+                                    <option>Ramp Lesion</option>
+                                    <option>Partial Tear</option>
+                                    <option>Bucket Handle</option>
+                                    <option>other--></option>
+                                </select>
+                                <label class="control-label">Detail :</label>
+                                <input class="form-control" id="txtSavedMedialMeniscusLeft" runat="server" type="text" disabled="" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Diagnosis :</label>
+                                <select id="ddlSavedDiagnosisLeft" class="form-control" runat="server" disabled="">
+                                    <option selected="selected"></option>
+                                    <option>ACL Tear</option>
+                                    <option>ACL/PCL Tear</option>
+                                    <option>PCL Tear</option>
+                                    <option>Multiligament Tear</option>
+                                    <option>ACL & Medial Meniscal Tear</option>
+                                    <option>ACL & Lateral Meniscal Tear</option>
+                                    <option>Multiligament & Medial Meniscal Tear</option>
+                                    <option>Multiligament & Lateral Meniscal Tear</option>
+                                    <option>Medial Meniscal tear</option>
+                                    <option>Lateral Meniscal Tear</option>
+                                    <option>other--></option>
+                                </select>
+                                <label class="control-label">Detail :</label>
+                                <input class="form-control" id="txtSavedDiagnosisLeft" runat="server" type="text" disabled="" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Plan :</label>
+                                <select id="ddlSavedPlanLeft" class="form-control" runat="server" disabled="">
+                                    <option selected="selected"></option>
+                                    <option>ACL Reconstruction</option>
+                                    <option>PCL Reconstruction</option>
+                                    <option>ACL/PCL Reconstruction</option>
+                                    <option>MultiLigament Reconstruction</option>
+                                    <option>ACL Reattach</option>
+                                    <option>ACL & Meniscal Repair</option>
+                                    <option>PCL & Meniscal Repair</option>
+                                    <option>Meniscal Repair</option>
+                                    <option>other--></option>
+                                </select>
+                                <label class="control-label">Detail :</label>
+                                <input class="form-control" id="txtSavedPlanLeft" runat="server" type="text" disabled="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <p></p>
+                            <label class="control-label">XRay :</label>
+                            <textarea id="txaSavedxrayrLeft" class="form-control" runat="server" disabled=""></textarea>
+                            <label class="control-label">PACS :</label>
+                            <input class="form-control" id="txtSavedPACSLeft" runat="server" type="text" disabled="" />
+                        </div>
                     </div>
                 </fieldset>
             </div>

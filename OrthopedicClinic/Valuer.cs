@@ -49,8 +49,8 @@ namespace OrthopedicClinic
             Res.Append("\" /></div></div><div class=\"clearfix\"></div><div class=\"col-lg-12 col-md-12 col-xs-12 col-sm-12\" id=\"imgsView\">");
             //====================================================
 
-            //try
-            //{
+            try
+            {
                 var files = Directory.GetFiles(Path.Combine(HttpContext.Current.Server.MapPath("~/uploads" ), pid  , wid ), "*.*", SearchOption.AllDirectories);
                 List<string> imageFiles = new List<string>();
                 int i = 0;
@@ -76,11 +76,12 @@ namespace OrthopedicClinic
                         i++;
                     }
                 }
-            //}
-            //catch(Exception ee) {
+            }
+            catch (Exception ee)
+            {
 
 
-            //}
+            }
             Res.Append("</div>");
 
 
