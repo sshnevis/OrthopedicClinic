@@ -64,7 +64,6 @@
   <ItemGroup>
     <Content Include="css\bootstrap-spacelab.css" />
     <Content Include="css\ssh.css" />
-    <Content Include="css\StyleSheet1.css" />
     <Content Include="default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\adhesivecapsulitis.aspx" />
